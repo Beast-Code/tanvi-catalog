@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-[#E8E0D4] bg-[#F5F0E8]">
@@ -24,10 +26,12 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[#2C2420] mb-3">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-sm text-[#8B7D6B] hover:text-[#2C2420] transition-colors duration-200">
+                <Link href="/" className="text-sm text-[#8B7D6B] hover:text-[#2C2420] transition-colors duration-200">
                   Full Catalog
-                </a>
+                </Link>
               </li>
+
+              {/* KEEP THESE AS <a> (external links) */}
               <li>
                 <a
                   href="https://wa.me/919106642524?text=Hi%2C%20I%27d%20like%20to%20know%20about%20wholesale%20pricing."
@@ -71,7 +75,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-[#E8E0D4] flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-[#A69882]">
             © {new Date().getFullYear()} Tanvi Wholesale. All rights reserved.
